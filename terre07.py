@@ -11,8 +11,13 @@ while i==0:
     if len(sys.argv) >2:
         print('Veuillez entrer une seule chaine de caractère')
         break
+    if type(int(sys.argv[1])) == int:
+        print('erreur')
+        break
+    if len(sys.argv) ==1:
+        print('Veuillez une chaine de caractère')
+        break
     string=sys.argv[1]
     reverse_string= string[::-1]
     print(reverse_string)
     i=i+1
-    
