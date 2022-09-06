@@ -21,9 +21,9 @@ except:
 else:
     if nombre1==nombre2 and nombre1==nombre3:
         sys.exit('error')
-    if nombre1>nombre2 and nombre1>nombre3 :
+    if nombre1>nombre2 and nombre1<nombre3 :
         print(nombre1)
-    if nombre2>nombre3 and nombre2>nombre1 :
+    if nombre2>nombre3 and nombre2<nombre1 :
         print(nombre2)
-    if nombre3>nombre1 and nombre3>nombre2 :
+    if nombre3>nombre1 and nombre3<nombre2 :
         print(nombre3)
