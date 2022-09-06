@@ -11,7 +11,7 @@ B = sys.argv[1]
 alphabet  = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
 b = alphabet.index(B)
-for i in range(b,26) :
+for i in range(b,27) :
     if i == 26 : 
         print('')
     else :     
