@@ -7,9 +7,11 @@ Created on Thu Sep  1 10:26:18 2022
 
 
 """
+import sys 
+
 while True:
  try:
-  nombre = int(input())
+  nombre = int(sys.argv[1])
   break
  except ValueError:
   print("Tu nous la metrra pas a l'envers") 
@@ -18,3 +20,5 @@ if nombre2 == 0 :
     print('pair')
 else :
     print('impair')
+
+        
