@@ -7,7 +7,7 @@ Created on Fri Sep  2 14:26:07 2022
 """
 import sys
 
-n= len(sys.argv)
+n= sys.argv.__len__()
 
 for i in range (1,n):
     print(sys.argv[i])
