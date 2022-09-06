@@ -22,5 +22,5 @@ elif 12< heure < 24:
     heure=heure-12
     print(str(heure)+':'+str(minutes0)+'PM')
 else : 
-    print('12:00AM')
+    print('12:'+str(minutes0)+'AM')
     
