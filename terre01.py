@@ -6,7 +6,7 @@ Created on Tue Aug 23 23:02:33 2022
 """
 
 alphabet  = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-for i in range(0,26) : 
+for i in range(0,27) : 
     if i == 26 : 
         print('')
     else :     
