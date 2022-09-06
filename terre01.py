@@ -12,3 +12,9 @@ for i in range(0,27) :
     else :     
         print(alphabet[i],end='')
     i= i+1 
+    
+    
+#for i in range(0,27) :     
+    #print(alphabet[i],end='')
+    #print('')
+       
