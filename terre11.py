@@ -7,6 +7,11 @@ Created on Mon Sep  5 19:43:52 2022
 """
 import sys
 
+if sys.argv.__len__() <2 :
+    sys.exit('error')
+if sys.argv.__len__() >2 :
+    sys.exit('error')
+
 try:
     nombre= int(sys.argv[1])
 except: 
