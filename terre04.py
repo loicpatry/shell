@@ -12,6 +12,9 @@ alphabet  = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q'
 
 b = alphabet.index(B)
 for i in range(b,26) :
-    print(alphabet[i],end='')
-    i= i+1
+    if i == 26 : 
+        print('')
+    else :     
+        print(alphabet[i],end='')
+    i= i+1 
 
