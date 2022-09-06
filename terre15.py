@@ -17,7 +17,7 @@ except:
 else:
     s=1
     while s<n-1:
-        if sys.argv[s]>sys.argv[s+1]:
+        if int(sys.argv[s])>int(sys.argv[s+1]):
             sys.exit('Pas trié!')
         s=s+1
     sys.exit('Trié!')   
