@@ -8,11 +8,11 @@ Created on Mon Sep  5 23:51:23 2022
 import sys 
 
 if len(sys.argv) != 2:
-    sys.exit('veuillez entrer UN nombre')
+    sys.exit('-1')
 try :
     N = int(sys.argv[1])
 except:
-    sys.exit('veuillez entrer un nombre')
+    sys.exit('-1')
 else: 
     if N<0: 
         sys.exit('-1')
