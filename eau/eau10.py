@@ -6,7 +6,8 @@ Created on Wed Sep  7 20:58:21 2022
 @author: patry
 """
 import sys 
-
+if len(sys.argv) != 3:
+    sys.exit('error')
 try :
     nombre1 = int(sys.argv[1])
     nombre2 = int(sys.argv[2])
