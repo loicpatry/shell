@@ -6,11 +6,12 @@ Created on Tue Sep  6 00:01:27 2022
 @author: patry
 """
 import sys
-
+if len(sys.argv) != 2:
+    sys.exit('-1')
 try : 
     nombre=int(sys.argv[1])
 except : 
-    sys.exit('error')
+    sys.exit('-1')
 else:
     if nombre<0: 
         sys.exit('-1')
