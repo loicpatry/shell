@@ -7,6 +7,9 @@ Created on Wed Sep  7 18:46:48 2022
 """
 import sys 
 
+if len(sys.argv) != 2:
+    sys.exit('error')
+
 try : 
     nombre= int(sys.argv[1])
 except : 
