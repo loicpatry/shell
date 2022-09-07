@@ -7,6 +7,9 @@ Created on Wed Sep  7 18:42:20 2022
 """
 import sys 
 
+if len(sys.argv) != 2:
+    sys.exit('error')
+
 try : 
     nombre= int(sys.argv[1])
 except : 
@@ -20,10 +23,8 @@ except :
             liste[i]=liste[i].upper()
         else: 
             liste[i]=liste[i].lower()
-    print(liste)
-    string_crr=''
-    string_crr.join(liste)
+    string_crr = "".join(liste)
+    print(string_crr)
         
 else: 
     sys.exit('veuillez entrer une chaine de caractère')
-
