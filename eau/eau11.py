@@ -17,4 +17,4 @@ try :
 except: 
     sys.exit('-1')
 else: 
-    print('index')
+    print(index)
