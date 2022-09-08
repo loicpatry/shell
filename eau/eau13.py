@@ -9,6 +9,9 @@ import sys
 
 n=len(sys.argv)
 
+if n<3:
+    sys.exit('error')
+
 try:
     for q in range(1,n):
         nombre=int(sys.argv[q])
@@ -29,5 +32,7 @@ else:
         return(mon_tableau)
     
     my_bubble_sort(mon_tableau)
-    print(mon_tableau)
+    for element in mon_tableau:
+        print(element,end=' ')
+    print('')
     
