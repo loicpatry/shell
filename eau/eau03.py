@@ -7,7 +7,10 @@ Created on Fri Sep  2 14:26:07 2022
 """
 import sys
 
+
 n= len(sys.argv)
+if n==1:
+    sys.exit('error')
 
 for i in range (n-1,0,-1):
     print(sys.argv[i])
