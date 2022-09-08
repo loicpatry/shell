@@ -12,5 +12,9 @@ tableau=[]
 
 for i in range(1,n-1):
     tableau.append(sys.argv[i])
-index= tableau.index(sys.argv[n-1])
-print(index)
+try :
+    index= tableau.index(sys.argv[n-1])
+except: 
+    sys.exit('-1')
+else: 
+    print('index')
