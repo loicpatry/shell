@@ -9,6 +9,8 @@ import sys
 
 n=len(sys.argv)
 
+if n<3:
+    sys.exit('error')
 try:
     for q in range(1,n):
         nombre=int(sys.argv[q])
