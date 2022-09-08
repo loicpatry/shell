@@ -9,8 +9,12 @@ import sys
 if len(sys.argv) != 3:
     sys.exit('error')
 try :
-    nombre1 = int(sys.argv[1])
-    nombre2 = int(sys.argv[2])
+    if int(sys.argv[1])< int(sys.argv[2]):
+        nombre1 = int(sys.argv[1])
+        nombre2 = int(sys.argv[2])
+    else: 
+        nombre1 = int(sys.argv[2])
+        nombre2 = int(sys.argv[1])
 except:
     sys.exit('entrer deux nombres')
 else:
