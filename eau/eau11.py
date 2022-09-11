@@ -7,7 +7,10 @@ Created on Wed Sep  7 22:03:12 2022
 """
 import sys 
 
+
 n = len(sys.argv)
+if n<3: 
+    sys.exit('error')
 tableau=[]
 
 for i in range(1,n-1):
