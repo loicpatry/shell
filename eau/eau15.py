@@ -13,7 +13,7 @@ def split(s):
 #########################################
 
 l=len(sys.argv) ## transformer les arguments en liste
-if l<2:
+if l<3:
     sys.exit('error')
 arguments=[]
 for i in range(1,l):
