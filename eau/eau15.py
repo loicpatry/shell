@@ -6,16 +6,6 @@ Created on Sun Sep 11 12:38:07 2022
 @author: patry
 """
 import sys
-def tri_selectif(mon_tableau): 
-        l= len(mon_tableau)
-        for i in range(0,l-1):
-            mini=i
-            for j in range(i+1,l):
-                if mon_tableau[j]<mon_tableau[mini]:
-                    mini=j
-            if mini != i:
-                (mon_tableau[i],mon_tableau[mini])=(mon_tableau[mini],mon_tableau[i])
-        return(mon_tableau)
     
 def split(s):
     return [char for char in s]
