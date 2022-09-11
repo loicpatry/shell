@@ -49,3 +49,5 @@ def separateur2(string_a_couper,string_separateur):
     for i in range(index+1,len(string_a_suivre)):
         print(string_a_suivre[i],end=' ')
     print(' ')
+
+separateur2(string_a_couper,string_separateur)
