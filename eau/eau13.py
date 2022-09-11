@@ -18,15 +18,15 @@ try:
 except: 
     sys.exit('veuilez n\'entrez que des nombres')
 else:
-
+    
     mon_tableau=[]
     
     for m in range(1,n):
         mon_tableau.append(int(sys.argv[m]))
     
     def my_bubble_sort(mon_tableau):
-        for i in range(n-1,1,-1):
-            for j in range(0,i-1):
+        for i in range(len(mon_tableau)-1,0,-1):
+            for j in range(0,i):
                 if mon_tableau[j+1]<mon_tableau[j]:
                     (mon_tableau[j+1],mon_tableau[j])=(mon_tableau[j],mon_tableau[j+1])
         return(mon_tableau)
