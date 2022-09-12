@@ -17,24 +17,30 @@ except:
     sys.exit('veuillez rentrer des nombres')
 else:
     operation = sys.argv[L-1][0]
-
-    number= int(sys.argv[L-1][1:])
+    if operation != '+' or operation != '-' or operation != '*' or operation != '/':
+        sys.exit('error')
+    
+    try: 
+        number= int(sys.argv[L-1][1:])
+    except:
+        sys.exit('error')
+    else:
 
     
     
-    if operation== '+':
+        if operation== '+':
+            for i in range(0,len(variable)):
+                variable[i]= variable[i] + number
+        if operation== '-':
+            for i in range(0,len(variable)):
+                variable[i]= variable[i] - number
+        if operation== '*':
+            for i in range(0,len(variable)):
+                variable[i]= variable[i] * number
+        if operation== '/':
+            for i in range(0,len(variable)):
+                variable[i]= variable[i] / number
+                
         for i in range(0,len(variable)):
-            variable[i]= variable[i] + number
-    if operation== '-':
-        for i in range(0,len(variable)):
-            variable[i]= variable[i] - number
-    if operation== '*':
-        for i in range(0,len(variable)):
-            variable[i]= variable[i] * number
-    if operation== '/':
-        for i in range(0,len(variable)):
-            variable[i]= variable[i] / number
-            
-    for i in range(0,len(variable)):
-        print(variable[i],end=' ')
-    print('')
+            print(variable[i],end=' ')
+        print('')
