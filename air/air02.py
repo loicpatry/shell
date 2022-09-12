@@ -41,13 +41,17 @@ def separateur2(string_a_couper,string_separateur):
         string_a_suivre.append((stringprint))
         return string_a_suivre
     separateur(string, Separateur)
-    index= string_a_suivre.index(string_separateur)
+    try:
+        index= string_a_suivre.index(string_separateur)
+    except:
+        sys.exit('separateur pas dans la liste')
+    else:
     
-    for i in range(0,index):
-        print(string_a_suivre[i],end=' ')
-    print(' ')
-    for i in range(index+1,len(string_a_suivre)):
-        print(string_a_suivre[i],end=' ')
-    print(' ')
+        for i in range(0,index):
+            print(string_a_suivre[i],end=' ')
+        print(' ')
+        for i in range(index+1,len(string_a_suivre)):
+            print(string_a_suivre[i],end=' ')
+        print(' ')
 
 separateur2(string_a_couper,string_separateur)
