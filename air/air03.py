@@ -6,7 +6,7 @@ Created on Fri Sep  9 22:34:56 2022
 @author: patry
 """
 import sys 
-if len(sys.argv)==1:
+if len(sys.argv)<3:
     sys.exit('error')
 tableau_arg=[]
 for i in range(1,len(sys.argv)-1):
