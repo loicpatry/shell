@@ -45,9 +45,10 @@ try:
         if sys.argv[i]== 'fusion':
             index.append(i)
             break
-        if len(index) != 1:
-            sys.exit('error')
+        
         array1.append(int(sys.argv[i]))
+    if len(index) != 1:
+            sys.exit('error')
     for i in range(index[0]+1,l):
         array2.append(int(sys.argv[i]))
         
