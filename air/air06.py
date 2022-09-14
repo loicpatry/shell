@@ -17,7 +17,7 @@ except:
     sys.exit('veuillez rentrer des nombres')
 else:
     operation = sys.argv[L-1][0]
-    if operation != '+' or operation != '-' or operation != '*' or operation != '/':
+    if operation != '+' and operation != '-' and operation != '*' and operation != '/':
         sys.exit('error')
     
     try: 
