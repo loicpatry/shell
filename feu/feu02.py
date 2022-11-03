@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Sep 20 17:35:27 2022
-
 @author: patry
 """
 import sys 
@@ -21,7 +20,6 @@ expression1= ''.join(expression1)
 def split(s):
     return [char for char in s]
 expression = split(expression1)
-
 
 for i in range(len(expression)):
     try : 
@@ -73,8 +71,12 @@ def calculation(expression):
     for i in range(len(expression)):
         if expression[i]  == '-':
             index_soustraction.append((i))
+    index_modulo=[]
+    for i in range(len(expression)):
+        if expression[i]  == '%':
+            index_modulo.append((i))
     while len(expression)>1:
-        while len(index_multiplication)>0 or len(index_division)>0:
+        while len(index_multiplication)>0 or len(index_division)>0 or len(index_modulo)>0:
             for element in expression:
                 for i in range(len(expression)):
                     if expression[i] == element:
@@ -100,6 +102,11 @@ def calculation(expression):
                     for i in range(len(expression)):
                         if expression[i]  == '-':
                             index_soustraction.append((i))
+                    index_modulo=[]
+                    for i in range(len(expression)):
+                        if expression[i]  == '%':
+                            index_modulo.append((i))
+                    break
                 elif element == '/':  
                     calcul = float(expression[index-1]) / float(expression[index+1])
                     expression = np.delete(expression,[index-1,index,index+1])
@@ -119,7 +126,37 @@ def calculation(expression):
                     index_soustraction=[]
                     for i in range(len(expression)):
                         if expression[i]  == '-':
-                            index_soustraction.append((i))      
+                            index_soustraction.append((i)) 
+                    index_modulo=[]
+                    for i in range(len(expression)):
+                        if expression[i]  == '%':
+                            index_modulo.append((i))
+                    break
+                elif element == '%':  
+                    calcul = float(expression[index-1]) % float(expression[index+1])
+                    expression = np.delete(expression,[index-1,index,index+1])
+                    expression = np.insert(expression,index-1,calcul)
+                    index_multiplication=[]
+                    for i in range(len(expression)):
+                        if expression[i]  == '*':
+                            index_multiplication.append((i))
+                    index_division=[]
+                    for i in range(len(expression)):
+                        if expression[i]  == '/':
+                            index_division.append((i))
+                    index_addition=[]
+                    for i in range(len(expression)):
+                        if expression[i]  == '+':
+                            index_addition.append((i))
+                    index_soustraction=[]
+                    for i in range(len(expression)):
+                        if expression[i]  == '-':
+                            index_soustraction.append((i))
+                    index_modulo=[]
+                    for i in range(len(expression)):
+                        if expression[i]  == '%':
+                            index_modulo.append((i))
+                    break
         while len(index_addition)>0 or len(index_soustraction)>0:
             for element in expression:
                 for i in range(len(expression)):
@@ -146,6 +183,10 @@ def calculation(expression):
                     for i in range(len(expression)):
                         if expression[i]  == '-':
                             index_soustraction.append((i))
+                    index_modulo=[]
+                    for i in range(len(expression)):
+                        if expression[i]  == '%':
+                            index_modulo.append((i))
                     break
                 elif expression[i] == '-':  
                     calcul = float(expression[index-1]) - float(expression[index+1])
@@ -167,8 +208,13 @@ def calculation(expression):
                     for i in range(len(expression)):
                         if expression[i]  == '-':
                             index_soustraction.append((i))
+                    index_modulo=[]
+                    for i in range(len(expression)):
+                        if expression[i]  == '%':
+                            index_modulo.append((i))
                     break
-                        
+                
+            
     
     return float(expression[0])
     
