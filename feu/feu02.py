@@ -8,7 +8,8 @@ Created on Tue Sep 20 17:35:27 2022
 import sys 
 import numpy as np
 
-
+if len(sys.argv)!= 2:
+    sys.exit('error')
 ####################################################################################
 expression1 = sys.argv[1]
 
