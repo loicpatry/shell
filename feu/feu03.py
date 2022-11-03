@@ -1,14 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Tue Sep 20 17:35:27 2022
+Created on Thu Nov  3 13:47:23 2022
 
+@author: patry
+"""
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Sep 20 17:35:27 2022
 @author: patry
 """
 import sys 
 import numpy as np
 ##########
-lines = open('board.txt').read().splitlines()
+lines = open(sys.argv[1]).read().splitlines()
 ##########
 def splits(s):
     return [char for char in s]
@@ -16,7 +22,7 @@ def splits(s):
 for i in range(len(lines)):
     lines[i]=splits(lines[i])
 ##########
-lines2 = open('to_find.txt').read().splitlines()
+lines2 = open(sys.argv[2]).read().splitlines()
 ##########
 def splits(s):
     return [char for char in s]
@@ -50,8 +56,22 @@ for i in range(range_i+1):
                     x=x+1
             
             y=y+len(line[j])
-        print(line)
         if x == y:
-            print('success')
-                
-        
+            print('Trouvé !')
+            print('coordonées: ', c,',',i)
+            for s in range(len(lines)):
+                for y in range(len(lines[s])):
+                    lines[s][y] = '-'
+            for q in range(len(lines2)):
+                for g in range(len(lines2)):
+                    lines[i+q][c+g]=lines2[q][g]
+                    if lines2[q][g]==' ':
+                        lines[i+q][c+g]='-'
+            for q in range(len(lines)):
+                for g in range(len(lines[q])):
+                    print(lines[q][g],end='')
+                print('')
+            sys.exit()
+            
+            
+sys.exit('Introuvable')
