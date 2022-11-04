@@ -233,11 +233,8 @@ if len(index_parenthesis_open)>0:
         
         expression2= expression[index_parenthesis_open[0]+1:index_parenthesis_close[0]]
         calcul = calculation(expression2)
-        print(expression2)
-        print(index_parenthesis_open[0])
-        print(index_parenthesis_close[0])
         index_a_supp = np.arange(index_parenthesis_open[0],index_parenthesis_close[0]+1,1)
-        print(index_a_supp)
+        
         
         #del expression[index_parenthesis_open[0]:index_parenthesis_close[0]+1]
         expression = np.delete(expression,index_a_supp)
@@ -253,7 +250,7 @@ if len(index_parenthesis_open)>0:
         for b in range(len(expression)):
             if expression[b]  == ')':
                 index_parenthesis_close.append((b))
-        print(expression)
+        
         
 
 expression = calculation(expression)
