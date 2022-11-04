@@ -141,7 +141,7 @@ else:
         chemin_final.append([y,x,dist])
        
         j=0
-        for x in range(13):
+        for x in range(min_dist+1):
             
             possibilite=[]
             for i in possibilite_final:
